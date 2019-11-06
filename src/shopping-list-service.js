@@ -22,13 +22,13 @@ const ShoppingListService = {
       .first()
   },
 
-  deleteArticle(knex, id) {
+  deleteItem(knex, id) {
     return knex('shopping_list')
       .where({id})
       .delete()
   },
 
-  updateArticle(knex, id, newShoppingItem) {
+  updateItem(knex, id, newShoppingItem) {
     return knex('shopping_list')
       .where ({id})
       .update(newShoppingItem)
